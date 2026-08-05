@@ -1,9 +1,79 @@
-function searchCars() {
-let input=document.getElementById("search").value.toLowerCase();
-let cards=document.querySelectorAll(".card");
 
-cards.forEach(card=>{
-let text=card.innerText.toLowerCase();
-card.style.display=text.includes(input)?"block":"none";
-});
+body{
+margin:0;
+font-family:Arial;
+background:#111;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:black;
+}
+
+header a{
+color:gold;
+margin:10px;
+text-decoration:none;
+}
+
+.hero{
+text-align:center;
+padding:80px;
+background:#222;
+}
+
+.hero input{
+padding:12px;
+width:300px;
+}
+
+.cars{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:#1d1d1d;
+padding:20px;
+border:2px solid gold;
+border-radius:10px;
+transition:.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:40px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+max-width:400px;
+}
+
+form input{
+padding:12px;
+margin:10px 0;
+}
+
+button{
+padding:12px;
+background:gold;
+border:none;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
 }
