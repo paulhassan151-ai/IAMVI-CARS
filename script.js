@@ -1,125 +1,108 @@
-// ==========================
-// IAMVI CARS SCRIPT
-// ==========================
+// ================================
+// IAMVI CARS Luxury Dealership
+// ================================
 
-// Live Search
-const searchInput = document.getElementById("searchInput");
-
-if (searchInput) {
-    searchInput.addEventListener("keyup", function () {
-
-        let value = this.value.toLowerCase();
-
-        let cards = document.querySelectorAll(".card");
-
-        cards.forEach(card => {
-
-            let title = card.querySelector("h3").textContent.toLowerCase();
-
-            if (title.includes(value)) {
-
-                card.style.display = "block";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    });
-}
-
-// Booking Form
-const bookingForm = document.querySelector("form");
-
-if (bookingForm) {
-
-    bookingForm.addEventListener("submit", function(e){
-
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e){
         e.preventDefault();
 
-        alert("🎉 Thank you! Your test drive has been booked successfully.");
+        const target = document.querySelector(this.getAttribute("href"));
 
-        bookingForm.reset();
-
+        if(target){
+            target.scrollIntoView({
+                behavior:"smooth"
+            });
+        }
     });
-
-}
-
-// Smooth Scroll
-document.querySelectorAll("a[href^='#']").forEach(link=>{
-
-link.addEventListener("click",function(e){
-
-e.preventDefault();
-
-document.querySelector(this.getAttribute("href")).scrollIntoView({
-
-behavior:"smooth"
-
 });
 
-});
+// Vehicle Search
+const search=document.getElementById("searchInput");
 
-});
+if(search){
 
-// Card Animation
+search.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
 const cards=document.querySelectorAll(".card");
 
 cards.forEach(card=>{
 
-card.addEventListener("mouseenter",()=>{
+const title=card.querySelector("h3").textContent.toLowerCase();
 
-card.style.transform="translateY(-12px) scale(1.02)";
+if(title.includes(value)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
 
 });
 
-card.addEventListener("mouseleave",()=>{
+});
 
-card.style.transform="translateY(0) scale(1)";
+}
+
+// Booking Form
+const form=document.querySelector("form");
+
+if(form){
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("✅ Thank you for choosing IAMVI CARS.\nOur sales team will contact you shortly.");
+
+form.reset();
 
 });
 
-});
+}
 
-// Statistics Animation
-const stats=document.querySelectorAll(".stats h2");
+// Counter Animation
+const counters=document.querySelectorAll(".stats h2");
 
-stats.forEach(stat=>{
+counters.forEach(counter=>{
 
-let target=parseInt(stat.innerText);
+const update=()=>{
 
-let count=0;
+const target=parseInt(counter.innerText);
 
-let speed=target/100;
+let count=parseInt(counter.getAttribute("data-count"))||0;
 
-function update(){
-
-count+=speed;
+const increment=Math.ceil(target/80);
 
 if(count<target){
 
-stat.innerText=Math.floor(count)+"+";
+count+=increment;
+
+counter.setAttribute("data-count",count);
+
+counter.innerText=count+"+";
 
 requestAnimationFrame(update);
 
 }else{
 
-stat.innerText=target+"+";
+counter.innerText=target+"+";
 
 }
 
-}
+};
 
 update();
 
 });
 
 // Welcome Message
-window.onload=function(){
+window.addEventListener("load",()=>{
 
-console.log("Welcome to IAMVI CARS Luxury Dealership");
+console.log("IAMVI CARS Luxury Website Loaded");
 
-};
+});
