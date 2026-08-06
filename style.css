@@ -1,218 +1,89 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    background:#111;
-    color:#fff;
-}
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(0,0,0,.8);
-    backdrop-filter:blur(10px);
-    z-index:1000;
-}
-
-.logo{
-    font-size:30px;
-    font-weight:700;
-    color:#fff;
-}
-
-.logo span{
-    color:gold;
-}
-
-nav a{
-    color:#fff;
-    text-decoration:none;
-    margin:0 15px;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:gold;
-}
-
-.btn,
-.hero-btn,
-button{
-    background:gold;
-    color:#111;
-    text-decoration:none;
-    border:none;
-    padding:12px 24px;
-    border-radius:30px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.btn:hover,
-.hero-btn:hover,
-button:hover{
-    background:#fff;
-    transform:translateY(-3px);
+margin:0;
+font-family:Arial,sans-serif;
+background:#0d0d0d;
+color:white;
 }
 
 .hero{
-    height:100vh;
-    background:url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600") center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.overlay{
-    background:rgba(0,0,0,.65);
-    padding:60px;
-    border-radius:20px;
-}
-
-.hero h1{
-    font-size:55px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:20px;
-    margin-bottom:30px;
-}
-
-section{
-    padding:90px 8%;
-}
-
-section h2{
-    text-align:center;
-    color:gold;
-    margin-bottom:40px;
-    font-size:36px;
-}
-
-.car-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
-
-.car-card{
-    background:#1b1b1b;
-    border:1px solid #333;
-    border-radius:15px;
-    overflow:hidden;
-    transition:.4s;
-}
-
-.car-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 10px 25px rgba(255,215,0,.3);
-}
-
-.car-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.car-card h3{
-    padding:15px;
-}
-
-.car-card p{
-    padding:0 15px 20px;
-    color:gold;
-    font-size:20px;
-}
-
-.car-card button{
-    margin:0 15px 20px;
-}
-
-form{
-    max-width:600px;
-    margin:auto;
-}
-
-form input{
-    width:100%;
-    padding:15px;
-    margin:15px 0;
-    border:none;
-    border-radius:8px;
-}
-
-.review{
-    background:#1c1c1c;
-    margin:20px auto;
-    padding:20px;
-    border-left:5px solid gold;
-    max-width:700px;
-}
-
-footer{
-    background:#000;
-    text-align:center;
-    padding:30px;
-    color:#999;
-}
-
-@media(max-width:768px){
-
-header{
-    flex-direction:column;
-    gap:15px;
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+url("images/hero.jpg");
+background-size:cover;
+background-position:center;
 }
 
 nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
 }
 
-.hero h1{
-    font-size:38px;
+.logo{
+font-size:34px;
+font-weight:bold;
 }
 
-.hero p{
-    font-size:17px;
+.logo span{
+color:#f7b731;
 }
 
-.overlay{
-    padding:30px;
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
 }
 
-}
-.whatsapp-btn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 20px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 5px 15px rgba(0,0,0,.3);
-    z-index:9999;
+nav a{
+color:white;
+text-decoration:none;
 }
 
-.whatsapp-btn:hover{
-    background:#1ebc59;
+.btn{
+background:#f7b731;
+padding:12px 30px;
+border-radius:30px;
+color:black;
+font-weight:bold;
+text-decoration:none;
+}
+
+.hero-content{
+text-align:center;
+margin-top:180px;
+}
+
+.hero-content h1{
+font-size:70px;
+color:#f7b731;
+}
+
+.hero-content p{
+font-size:22px;
+width:700px;
+margin:auto;
+line-height:35px;
+}
+
+.buttons{
+margin-top:40px;
+}
+
+.gold-btn{
+background:#f7b731;
+padding:18px 45px;
+border-radius:35px;
+color:black;
+font-weight:bold;
+text-decoration:none;
+margin-right:15px;
+}
+
+.outline-btn{
+border:2px solid #f7b731;
+padding:18px 45px;
+border-radius:35px;
+color:#f7b731;
+text-decoration:none;
 }
