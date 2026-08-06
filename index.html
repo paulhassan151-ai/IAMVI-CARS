@@ -3,70 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IAMVI CARS | Luxury Car Dealership</title>
+<title>IAMVI CARS | Luxury Dealership</title>
 
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
-<header>
+<header class="hero">
 
 <nav>
 
-<h2 class="logo">
+<div class="logo">
+
 IAMVI <span>CARS</span>
-</h2>
+
+</div>
 
 <ul>
 
 <li><a href="#">Home</a></li>
 
-<li><a href="#cars">Luxury Cars</a></li>
+<li><a href="#inventory">Inventory</a></li>
+
+<li><a href="#brands">Brands</a></li>
 
 <li><a href="#about">About</a></li>
-
-<li><a href="#services">Services</a></li>
-
-<li><a href="#reviews">Reviews</a></li>
 
 <li><a href="#contact">Contact</a></li>
 
 </ul>
 
-<a href="#" class="book">
+<a href="#booking" class="btn">
 Book Test Drive
 </a>
 
 </nav>
 
-<div class="hero">
+<div class="hero-content">
+
+<h4>WELCOME TO</h4>
 
 <h1>
-Luxury Beyond Imagination
+Luxury Cars <br>
+Without Limits
 </h1>
 
 <p>
 
-Discover world-class luxury vehicles carefully selected for comfort, performance and prestige.
+Discover premium luxury vehicles from Mercedes-Benz,
+BMW, Ferrari, Lamborghini, Bentley,
+Rolls-Royce and more.
 
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
-<a href="#cars" class="gold">
-
+<a href="#inventory" class="gold">
 Explore Collection
-
 </a>
 
 <a href="#contact" class="outline">
-
 Contact Sales
-
 </a>
 
 </div>
@@ -75,7 +81,43 @@ Contact Sales
 
 </header>
 
-<section id="cars">
+<section class="stats">
+
+<div>
+
+<h2>2500+</h2>
+
+<p>Cars Sold</p>
+
+</div>
+
+<div>
+
+<h2>3800+</h2>
+
+<p>Happy Customers</p>
+
+</div>
+
+<div>
+
+<h2>15+</h2>
+
+<p>Luxury Brands</p>
+
+</div>
+
+<div>
+
+<h2>10+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+</section>
+
+<section id="inventory">
 
 <h2 class="title">
 
@@ -83,15 +125,24 @@ Featured Luxury Collection
 
 </h2>
 
+<div class="search">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search luxury cars...">
+
+</div>
+
 <div class="cars">
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900" alt="Mercedes">
+<img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900">
 
 <h3>Mercedes-Benz S-Class</h3>
 
-<p>$135,000</p>
+<h4>$135,000</h4>
 
 <button>View Details</button>
 
@@ -99,11 +150,11 @@ Featured Luxury Collection
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900" alt="BMW">
+<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900">
 
 <h3>BMW X7</h3>
 
-<p>$112,000</p>
+<h4>$112,000</h4>
 
 <button>View Details</button>
 
@@ -111,11 +162,11 @@ Featured Luxury Collection
 
 <div class="card">
 
-<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900" alt="Range Rover">
+<img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900">
 
-<h3>Range Rover Autobiography</h3>
+<h3>Range Rover</h3>
 
-<p>$175,000</p>
+<h4>$176,000</h4>
 
 <button>View Details</button>
 
@@ -125,17 +176,87 @@ Featured Luxury Collection
 
 </section>
 
+<section id="brands">
+
+<h2 class="title">
+
+Luxury Brands
+
+</h2>
+
+<div class="brand-grid">
+
+<div>Mercedes-Benz</div>
+
+<div>BMW</div>
+
+<div>Ferrari</div>
+
+<div>Lamborghini</div>
+
+<div>Bentley</div>
+
+<div>Rolls-Royce</div>
+
+<div>Porsche</div>
+
+<div>Audi</div>
+
+</div>
+
+</section>
+
+<section id="booking">
+
+<h2 class="title">
+
+Book Your Test Drive
+
+</h2>
+
+<form>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email">
+
+<input type="tel" placeholder="Phone">
+
+<select>
+
+<option>Select Vehicle</option>
+
+<option>Mercedes S-Class</option>
+
+<option>BMW X7</option>
+
+<option>Range Rover</option>
+
+</select>
+
+<input type="date">
+
+<button>
+
+Book Test Drive
+
+</button>
+
+</form>
+
+</section>
+
 <section id="about">
 
 <h2 class="title">
 
-Why Choose IAMVI CARS?
+About IAMVI CARS
 
 </h2>
 
-<p class="about">
+<p>
 
-We specialize in premium and luxury vehicles from the world's leading manufacturers. Every vehicle undergoes a thorough inspection to ensure outstanding quality, reliability, and customer satisfaction.
+IAMVI CARS is a premium luxury automobile dealership dedicated to providing world-class vehicles, exceptional customer service, and unforgettable driving experiences.
 
 </p>
 
@@ -149,11 +270,11 @@ Contact Us
 
 </h2>
 
-<p>Email: sales@iamvicars.com</p>
+<p>📍 Abuja, Nigeria</p>
 
-<p>Phone: +234 XXX XXX XXXX</p>
+<p>📞 +234 XXX XXX XXXX</p>
 
-<p>Location: Abuja, Nigeria</p>
+<p>✉ sales@iamvicars.com</p>
 
 </section>
 
@@ -161,7 +282,7 @@ Contact Us
 
 <p>
 
-© 2026 IAMVI CARS. Luxury Redefined.
+© 2026 IAMVI CARS
 
 </p>
 
@@ -170,4 +291,5 @@ Contact Us
 <script src="script.js"></script>
 
 </body>
+
 </html>
